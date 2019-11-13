@@ -1,10 +1,10 @@
 import React from 'react';
-import { Input } from 'antd'; 
+import { Input } from 'antd';
 
-const input = (props) => {
+const useInput = (props) => {
   return (
     <Input {...props} />
   );
 };
 
-export default input;
+export default useInput;

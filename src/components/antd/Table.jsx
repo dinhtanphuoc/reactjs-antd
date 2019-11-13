@@ -1,10 +1,10 @@
 import React from 'react';
-import { Table } from 'antd'; 
+import { Table } from 'antd';
 
-const table = (props) => {
+const useTable = (props) => {
   return (
     <Table {...props} />
   );
 };
 
-export default table;
+export default useTable;

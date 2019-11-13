@@ -1,12 +1,12 @@
 import React from 'react';
-import { Input } from 'antd'; 
+import { Input } from 'antd';
 
 const { TextArea } = Input;
 
-const textArea = (props) => {
+const useTextArea = (props) => {
   return (
     <TextArea {...props} />
   );
 };
 
-export default textArea;
+export default useTextArea;
