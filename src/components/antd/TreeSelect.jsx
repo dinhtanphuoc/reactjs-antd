@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TreeSelect } from 'antd';
+import { TreeSelect as TreeSelectAntd } from 'antd';
 
-const useTreeSelect = (props) => {
+export const TreeSelect = (props) => {
   return (
-    <TreeSelect {...props} />
+    <TreeSelectAntd {...props} />
   );
 };
 
-useTreeSelect.propTypes  = {
+TreeSelect.propTypes  = {
   treeData: PropTypes.array,
   style: PropTypes.object
 };
 
-useTreeSelect.defaultProps = {
+TreeSelect.defaultProps = {
   treeData: [],
   style: {
     width: '100%'
   }
 };
-
-export default useTreeSelect;

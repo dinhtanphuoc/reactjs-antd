@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row } from 'antd';
+import { Row as RowAntd } from 'antd';
 
-const useRow = (props) => {
+export const Row = (props) => {
   return (
-    <Row {...props}>
+    <RowAntd {...props}>
       { props.children }
-    </Row>
+    </RowAntd>
   );
 };
 
-useRow.propTypes  = {
+Row.propTypes  = {
   children: PropTypes.node
 };
-
-export default useRow;

@@ -1,10 +1,16 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input as IndexAntd } from 'antd';
 
-const useInput = (props) => {
+const { TextArea } = IndexAntd;
+
+export const Input = (props) => {
   return (
-    <Input {...props} />
+    <IndexAntd {...props} />
   );
 };
 
-export default useInput;
+export const InputArea = (props) => {
+  return (
+    <TextArea {...props} />
+  );
+};

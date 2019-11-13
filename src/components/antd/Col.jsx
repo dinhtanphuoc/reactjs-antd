@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col } from 'antd';
+import { Col as ColAntd } from 'antd';
 
-const useCol = (props) => {
+export const Col = (props) => {
   return (
-    <Col {...props}>
+    <ColAntd {...props}>
       { props.children }
-    </Col>
+    </ColAntd>
   );
 };
 
-useCol.propTypes  = {
+Col.propTypes  = {
   children: PropTypes.node
 };
-
-export default useCol

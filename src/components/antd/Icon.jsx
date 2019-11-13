@@ -1,10 +1,8 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { Icon as IconAntd } from 'antd';
 
-const useIcon = (props) => {
+export const Icon = (props) => {
   return (
-    <Icon {...props} />
+    <IconAntd {...props} />
   );
 };
-
-export default useIcon

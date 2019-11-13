@@ -1,10 +1,8 @@
 import React from 'react';
-import { Table } from 'antd';
+import { Table as TableAntd } from 'antd';
 
-const useTable = (props) => {
+export const Table = (props) => {
   return (
-    <Table {...props} />
+    <TableAntd {...props} />
   );
 };
-
-export default useTable;

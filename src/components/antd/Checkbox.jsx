@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Checkbox } from 'antd';
+import { Checkbox as CheckboxAntd } from 'antd';
 
-const useCheckbox = (props) => {
+export const Checkbox = (props) => {
   return (
-    <Checkbox {...props}>
+    <CheckboxAntd {...props}>
       { props.children }
-    </Checkbox>
+    </CheckboxAntd>
   );
 };
 
-useCheckbox.propTypes  = {
+Checkbox.propTypes  = {
   children: PropTypes.node
 };
-
-export default useCheckbox;

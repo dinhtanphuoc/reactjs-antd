@@ -1,10 +1,8 @@
 import React from 'react';
-import { DatePicker } from 'antd';
+import { DatePicker as DatePickerAntd } from 'antd';
 
-const useDatePicker = (props) => {
+export const DatePicker = (props) => {
   return (
-    <DatePicker {...props} />
+    <DatePickerAntd {...props} />
   );
 };
-
-export default useDatePicker;

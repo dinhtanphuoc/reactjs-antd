@@ -4,7 +4,7 @@ import { Typography } from 'antd';
 
 const { Text } = Typography;
 
-const useViewText = (props) => {
+export const View = (props) => {
   return (
     <Text {...props}>
       { props.children }
@@ -12,8 +12,6 @@ const useViewText = (props) => {
   );
 };
 
-useViewText.propTypes  = {
+View.propTypes  = {
   children: PropTypes.node
 };
-
-export default useViewText;

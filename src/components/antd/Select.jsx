@@ -1,32 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Select } from 'antd';
+import { Select as SelectAntd } from 'antd';
 import { isArray, map } from 'lodash';
 
-const { Option } = Select;
+const { Option } = SelectAntd;
 
 const children = (data = []) => {
   return isArray(data) && map(data, (item) => (<Option key={item.value} value={item.value}>{item.name}</Option>));
 };
 
-const useSelect = (props) => {
+export const Select = (props) => {
   return (
-    <Select {...props}>
+    <SelectAntd {...props}>
       { children(props.dataSelect) }
-    </Select>
+    </SelectAntd>
   );
 };
 
-useSelect.propTypes  = {
+Select.propTypes  = {
   dataSelect: PropTypes.array,
   style: PropTypes.object
 };
 
-useSelect.defaultProps = {
+Select.defaultProps = {
   dataSelect: [],
   style: {
     width: '100%'
   }
 };
-
-export default useSelect;

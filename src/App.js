@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {
   Input,
-  TextArea,
-  ViewText,
+  InputArea,
+  View,
   Select,
   TreeSelect,
   Checkbox,
@@ -15,12 +15,16 @@ import {
   FormItem,
   Row,
   Col,
-  createForm
+  createForm,
+  Table,
+  Button,
+  notification,
+  Modal,
+  modalType
 } from './components/antd';
 // import createForm from './components/createForm';
 
 function App(props) {
-  console.log(props)
   return (
     <div className="App">
       <header className="App-header">
@@ -28,12 +32,12 @@ function App(props) {
         <Row type="flex">
           <Col sm={24}>
             <Input />
-            <ViewText type="warning" strong>
+            <View type="warning" strong>
               <p>
                 Edit <code>src/App.js</code> and save to reload.
               </p>
-            </ViewText>
-            <TextArea />
+            </View>
+            <InputArea />
             <Select dataSelect={[{value: 1, name: 'abc'}, {value: 2, name: 'def'}]} />
             <TreeSelect treeData={[]} />
             <Checkbox> Checkbox </Checkbox>
@@ -45,6 +49,17 @@ function App(props) {
             <RadioGroup>
               <Radio />
             </RadioGroup>
+            <Table />
+            <Button />
+            <Button onClick={() => notification({ type: "success", message: "Thành công", description: "Click button thành công"}) }>
+              Click Noti
+            </Button>
+            <Modal>
+              Modal demo
+            </Modal>
+            <Button onClick={() => modalType({ type: "confirm", title: "Modal", content: "Click button thành công"}) }>
+              Click Modal
+            </Button>
           </Col>
         </Row>
         <a
@@ -60,5 +75,4 @@ function App(props) {
   );
 }
 
-const aaa = createForm({name: 'test', component: App})
-export default aaa;
+export default createForm({name: 'test', component: App});
