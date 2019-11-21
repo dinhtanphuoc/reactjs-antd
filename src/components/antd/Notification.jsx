@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { notification as notificationAntd } from 'antd';
 
 export const notification = (props) => {
-  return notificationAntd[props.type]({...props})
+  return notificationAntd[props.type]({...props});
 };
 
 notification.propTypes  = {

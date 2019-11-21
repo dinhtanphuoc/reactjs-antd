@@ -22,9 +22,11 @@ import {
   Modal,
   modalType
 } from './components/antd';
-// import createForm from './components/createForm';
+import { routes } from './routes';
 
 function App(props) {
+
+  console.log(routes);
   return (
     <div className="App">
       <header className="App-header">

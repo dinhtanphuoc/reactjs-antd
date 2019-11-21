@@ -15,8 +15,8 @@ Modal.propTypes  = {
 };
 
 export const modalType = (props) => {
-  return ModalAntd[props.type]({...props})
-}
+  return ModalAntd[props.type]({...props});
+};
 
 modalType.propTypes  = {
   type: PropTypes.string
