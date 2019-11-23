@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from 'logo.svg';
+import 'App.css';
 import {
   Input,
   InputArea,
@@ -21,12 +21,10 @@ import {
   notification,
   Modal,
   modalType
-} from './components/antd';
-import { routes } from './routes';
+} from 'components/antd';
 
 function App(props) {
-
-  console.log(routes);
+  console.log(props);
   return (
     <div className="App">
       <header className="App-header">
@@ -72,6 +70,7 @@ function App(props) {
         >
           Learn React
         </a>
+        <Button onClick={()=> {props.history.push('chuyen-trang');}} > Chuyen trang 456</Button>
       </header>
     </div>
   );

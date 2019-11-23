@@ -1,13 +1,4 @@
-const service_A = [
-  {
-    path: 'qwe',
-    component: null,
-  },
-  {
-    path: 'rty',
-    component: null,
-  }
-];
+const service_A = [];
 
 const service_B = [
   {

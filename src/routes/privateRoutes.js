@@ -1,28 +1,21 @@
+import App from '../App';
+import Demo from '../Demo';
+
 const service_A = [
   {
-    path: 'abc',
-    component: null,
+    path: '/',
+    component: App,
+    exact: true,
     role: 'ABC'
   },
   {
-    path: 'def',
-    component: null,
-    role: 'ABC'
+    path: '/chuyen-trang',
+    component: Demo,
+    role: 'DEF'
   }
 ];
 
-const service_B = [
-  {
-    path: '123',
-    component: null,
-    role: 'ABC'
-  },
-  {
-    path: '456',
-    component: null,
-    role: 'ABC'
-  }
-];
+const service_B = [];
 
 
 export const privateRoutes = [
